@@ -1,75 +1,86 @@
-pokemonList = [
-  {
-    pokeName: "Blastoise",
-    pokeHeight: 1.6,
-    pokeCategory: "Shellfish",
-    pokeAbilities: "Torrent",
-    pokeType: "Water",
-  },
-  {
-    pokeName: "Butterfree",
-    pokeHeight: 1.1,
-    pokeCategory: "Butterfly",
-    pokeAbilities: "Compound Eyes",
-    pokeType: "Bug",
-  },
-  {
-    pokeName: "Pidgey",
-    pokeHeight: 0.3,
-    pokeCategory: "Tiny Bird",
-    pokeAbilities: "Keen Eye",
-    pokeType: "Flying",
-  },
-  {
-    pokeName: "Pikachu",
-    pokeHeight: 0.4,
-    pokeCategory: "Mouse",
-    pokeAbilities: "Static",
-    pokeType: "Electric",
-  },
-  {
-    pokeName: "Vulpix",
-    pokeHeight: 0.6,
-    pokeCategory: "Fox",
-    pokeAbilities: "Flash Fire",
-    pokeType: "Fire",
-  },
-];
+var pokemonRepository = (function () {
+  var pokemonList = [
+    {
+      name: "Blastoise",
+      height: 1.6,
+      category: "Shellfish",
+      abilities: "Torrent",
+      type: "Water",
+    },
+    {
+      name: "Butterfree",
+      height: 1.1,
+      category: "Butterfly",
+      abilities: "Compound Eyes",
+      type: "Bug",
+    },
+    {
+      name: "Pidgey",
+      height: 0.3,
+      category: "Tiny Bird",
+      abilities: "Keen Eye",
+      type: "Flying",
+    },
+    {
+      name: "Pikachu",
+      height: 0.4,
+      category: "Mouse",
+      abilities: "Static",
+      type: "Electric",
+    },
+    {
+      name: "Vulpix",
+      height: 0.6,
+      category: "Fox",
+      abilities: "Flash Fire",
+      type: "Fire",
+    },
+  ];
 
-//create for loop that iterates over each item in pokemonList
+  function getAll(pokemon) {
+    return pokemonList;
+  }
 
-// for (var i = 0; i < pokemonList.length; i++) {
-//   document.write(
-//     "Pokemon Name: " +
-//       "<strong>" +
-//       pokemonList[i].pokeName +
-//       "</strong>" +
-//       "<br>" +
-//       " Height: " +
-//       pokemonList[i].pokeHeight +
-//       "m"
-//   );
-//   if (pokemonList[i].pokeHeight >= 0.6) {
-//     document.write(" - " + "Wow that's big!" + "<br>" + "<br>");
-//   } else {
-//     document.write(" - " + "Wow that's cute!" + "<br>" + "<br>");
-//   }
-// }
+  function add(pokemon) {
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "category" in pokemon &&
+      "abilities" in pokemon &&
+      "type" in pokemon
+    ) {
+      pokemonList.push(pokemon);
+    }
+  }
 
-//create forEach loop that iterates over each item in pokemonList
+  return {
+    add: add,
+    getAll: getAll,
+  };
+})(); //IIFE wrap
 
-pokemonList.forEach(function (pokemonChecklist) {
+//adding new character in the repository
+pokemonRepository.add({
+  name: "Swablu",
+  height: 0.4,
+  category: "cotton bird",
+  abilities: "natural care",
+  type: "flying",
+});
+
+pokemonRepository.getAll().forEach(function (pokemon) {
   document.write(
     "Pokemon Name: " +
       "<strong>" +
-      pokemonChecklist.pokeName +
+      pokemon.name +
       "</strong>" +
       "<br>" +
       " Height: " +
-      pokemonChecklist.pokeHeight +
+      pokemon.height +
       "m"
   );
-  if (pokemonChecklist.pokeHeight >= 0.6) {
+  if (pokemon.height >= 0.6) {
     document.write(" - " + "Wow that's big!" + "<br>" + "<br>");
   } else {
     document.write(" - " + "Wow that's cute!" + "<br>" + "<br>");
