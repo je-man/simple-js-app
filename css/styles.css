@@ -1,4 +1,24 @@
-.pokemon-list li {
+.navbar {
+    background-color: #8b6d6c;
+    color: white;
+}
+
+.card {
+    background-color: #eae6dd;
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    /* background-color: #eae6dd; */
+}
+
+/* body {
+    margin-left: 5%;
+} */
+
+/* .pokemon-list li {
     list-style: none;
     margin-left: none;
 }
@@ -52,9 +72,9 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
-#modal-container.is-visible {
+/* #modal-container.is-visible {
     display: block;
     position: fixed;
     padding: 20px;
@@ -65,14 +85,17 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     /* to show it above other content */
-    z-index: 999;
-    /*to allow scrolling if the screen is not high enough*/
-    overflow: auto;
-    /* this is used to center the modal */
-    text-align: center;
-}
 
-.modal-close {
+/*to allow scrolling if the screen is not high enough*/
+
+/* overflow: auto;
+/* this is used to center the modal */
+
+/* 
+text-align: center;
+} */
+
+/* .modal-close {
     border-radius: 6px;
     border: 1px solid #7f8cb8;
     display: block;
@@ -83,10 +106,11 @@
     font-weight: bold;
     padding: 6px 6px;
     text-decoration: none;
-    float: right;
-}
+    float: right; */
 
-.modal-close:hover {
+/*  */
+
+/* .modal-close:hover {
     color: white;
     background-color: #7f8cb8;
-}
+} */
