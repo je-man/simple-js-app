@@ -114,3 +114,21 @@ text-align: center;
     color: white;
     background-color: #7f8cb8;
 } */
+
+@media (max-width: 420px) {
+    .row {
+        width: 40%;
+    }
+}
+
+@media (min-width: 380px) and (max-width: 660px) {
+    .row {
+        width: 50%;
+    }
+}
+
+@media (min-width: 980px) {
+    .row {
+        width: 100%;
+    }
+}
