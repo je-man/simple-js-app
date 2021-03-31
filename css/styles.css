@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .navbar {
     background-color: #8b6d6c;
     color: white;
@@ -12,6 +16,16 @@
     margin-right: auto;
     height: auto;
     /* background-color: #eae6dd; */
+}
+
+input[type=text] {
+    box-sizing: border-box;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    color: #d88780;
+    width: 100%;
+    padding: 8px;
 }
 
 /* body {
@@ -121,13 +135,13 @@ text-align: center;
     }
 }
 
-@media (min-width: 380px) and (max-width: 660px) {
+@media (min-width: 380px) and (max-width: 720px) {
     .row {
-        width: 50%;
+        width: 70%;
     }
 }
 
-@media (min-width: 980px) {
+@media (min-width: 960px) {
     .row {
         width: 100%;
     }
